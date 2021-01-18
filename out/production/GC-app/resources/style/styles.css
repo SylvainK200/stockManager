@@ -1,0 +1,95 @@
+.entete{
+   -fx-background-image: url("../images/chantier4.jpg");
+
+}
+.buttonEntete
+{
+   -fx-background-color : rgb(6, 134, 143);
+   -fx-font-size:20;
+   -fx-effect:dropshadow(gaussian, rgb(6, 134, 143),4,0.8,1.0,1.0);
+   -fx-text-fill:rgb(255, 255, 255);  
+}
+.blocks {
+   -fx-background-color : rgb(255, 255, 255);
+   -fx-border-radius: 20px;
+   -fx-background-radius:20px;
+    
+}
+.principale 
+{
+   
+}
+
+.boutonEntete{
+   
+}
+.sousTitre{
+   -fx-text-fill : rgb(24, 44, 168); 
+   -fx-font-size : 21;
+   -fx-font-style : Bold italic; 
+   
+}
+.titre {
+   -fx-text-fill :#f3691f;
+   -fx-font-size : 32;
+   -fx-font-style : Bold italic; 
+   -fx-effect:dropshadow(gaussian,black,5,0.2,1.0,1.0);
+}
+
+.valider
+{
+    -fx-background-color : rgb(131, 171, 243);
+    -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.8,1.0,1.0);
+    -fx-text-fill:black;
+}
+.annuler
+{
+    -fx-background-color:#a1420b;
+    -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.8,1.0,1.0);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+.connection 
+{
+   -fx-border-radius:20px;
+   -fx-background-radius:20px;
+}
+.commander{
+   -fx-background-color : rgb(6, 134, 143);
+    -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.8,1.0,1.0);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+
+.classer{
+   -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.5,1.0,1.0);
+
+}
+.recherche
+{
+    -fx-background-radius: 30px;
+    -fx-border-radius : 30px;
+}
+
+.commander{
+   -fx-background-color : rgb(5, 100, 107);
+    -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,rgb(5, 5, 5),4,0.8,1.0,1.0);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+
+.pagePrincipale{
+   -fx-background-image: url("../images/chantier4.jpg");
+}

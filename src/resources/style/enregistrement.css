@@ -1,0 +1,46 @@
+.valider
+{
+    -fx-background-color : rgb(28, 94, 218);
+    -fx-font-size:18;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.8,1.0,1.0);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+.annuler
+{
+    -fx-background-color:#ca6125;
+    -fx-font-size:16;
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(gaussian,black,4,0.8,1.0,1.0);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+.background
+{
+    -fx-background-image : url("../images/chantier.jpg")
+}
+
+.intitule {
+    -fx-font-size : 18 ; 
+
+}
+
+.formulaire
+{
+    -fx-background-radius: 30px;
+    -fx-border-radius : 30px;
+}
+
+.titre {
+    -fx-text-fill : rgb(231, 163, 73); 
+    -fx-font-size : 33;
+    -fx-font-style : Bold italic; 
+    -fx-effect:dropshadow(gaussian,black,4,0.4,1.0,1.0);
+ }
+
+ .block{
+    -fx-background-color : rgb(195, 212, 245);
+    -fx-border-radius: 30px;
+    -fx-background-radius:30px;
+ }
