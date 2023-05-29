@@ -1,5 +1,5 @@
 .entete{
-   -fx-background-image: url("../images/chantier4.jpg");
+   -fx-background-image: url("../images/gc_background.jpg");
 
 }
 .buttonEntete
@@ -91,5 +91,5 @@
 }
 
 .pagePrincipale{
-   -fx-background-image: url("../images/chantier4.jpg");
+   -fx-background-image: url("../images/gc_background.jpg");
 }
