@@ -9,56 +9,92 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1200.0" styleClass="pagePrincipale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PagePrincipaleController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1200.0" styleClass="pagePrincipale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PagePrincipaleController">
    <top>
       <AnchorPane prefHeight="170.0" prefWidth="1200.0" styleClass="entete" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="63.0" fitWidth="98.0" layoutX="377.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="41.0" fitWidth="37.0" layoutX="394.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/images/iconeApplication.png" />
                </image>
             </ImageView>
             <Text layoutX="454.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock Manager">
                <font>
-                  <Font name="Algerian" size="45.0" />
+                  <Font name="Cambria Bold" size="36.0" />
                </font>
             </Text>
-            <HBox layoutY="112.0" prefHeight="37.0" prefWidth="1200.0" spacing="8.0">
+            <HBox fillHeight="false" layoutY="41.0" prefHeight="70.0" prefWidth="1200.0" spacing="2.0">
                <children>
-                  <Button fx:id="operations" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goToOperation" prefHeight="63.0" prefWidth="216.0" styleClass="buttonEntete" text="Journal" />
-                  <Button fx:id="fournisseur" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToFournisseurs" prefHeight="26.0" prefWidth="221.0" styleClass="buttonEntete" text="Fournisseur" />
-                  <Button fx:id="prixFournisseurs" alignment="CENTER" layoutX="231.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToPrixFournisseurs" prefHeight="63.0" prefWidth="221.0" styleClass="buttonEntete" text="Prix fournisseurs" />
-                  <Button fx:id="materiel" alignment="CENTER" layoutX="452.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToMaterial" prefHeight="44.0" prefWidth="267.0" styleClass="buttonEntete" text="liste materiels et materiaux" />
-                  <Button fx:id="stock" alignment="CENTER" layoutX="673.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="44.0" prefWidth="193.0" styleClass="buttonEntete" text="stock" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" disable="true" layoutY="65.0" prefHeight="44.0" prefWidth="1200.0" spacing="190.0">
-               <children>
-                  <ImageView fitHeight="44.0" fitWidth="206.0" layoutX="568.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/journal.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="44.0" fitWidth="48.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/fournisseurs.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="44.0" fitWidth="207.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/facturation.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="44.0" fitWidth="206.0" layoutX="382.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/material.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="44.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/images/stock.png" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="100.0" prefWidth="104.0">
+                     <children>
+                        <Button fx:id="operations" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToOperation" prefHeight="43.0" prefWidth="119.0" styleClass="buttonEntete" text="Journal" />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="44.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/journal.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="873.0" layoutY="10.0" prefHeight="100.0" prefWidth="166.0">
+                     <children>
+                        <Button fx:id="fournisseur" alignment="CENTER" layoutX="9.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToFournisseurs" prefHeight="43.0" prefWidth="151.0" styleClass="buttonEntete" text="Fournisseur" />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="61.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/fournisseurs.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="851.0" layoutY="10.0" prefHeight="100.0" prefWidth="166.0">
+                     <children>
+                        <Button fx:id="prixFournisseurs" alignment="CENTER" layoutX="3.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToPrixFournisseurs" prefHeight="43.0" prefWidth="156.0" styleClass="buttonEntete" text="Prix " />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="61.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/facturation.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="874.0" layoutY="10.0" prefHeight="118.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="materiel" alignment="CENTER" layoutX="2.0" layoutY="74.0" mnemonicParsing="false" onAction="#goToMaterial" prefHeight="43.0" prefWidth="204.0" styleClass="buttonEntete" text="Materiel / Materiau" />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="85.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/material.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="830.0" layoutY="10.0" prefHeight="118.0" prefWidth="137.0">
+                     <children>
+                        <Button fx:id="stock" alignment="CENTER" layoutX="1.0" layoutY="74.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="43.0" prefWidth="134.0" styleClass="buttonEntete" text="Stock" />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="71.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/stock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="118.0" prefWidth="182.0">
+                     <children>
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="65.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/journal.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="programme" alignment="CENTER" layoutX="3.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="43.0" prefWidth="174.0" styleClass="buttonEntete" text="Programme" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="118.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="personnel" alignment="CENTER" layoutX="11.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="43.0" prefWidth="177.0" styleClass="buttonEntete" text="Personnel" />
+                        <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="63.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/journal.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
          </children>

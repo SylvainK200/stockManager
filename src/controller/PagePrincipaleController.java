@@ -15,6 +15,12 @@ public class PagePrincipaleController  {
     private Button operations;
 
     @FXML
+    private Button personnel;
+
+    @FXML
+    private Button programme;
+
+    @FXML
     private Button fournisseur;
 
     @FXML

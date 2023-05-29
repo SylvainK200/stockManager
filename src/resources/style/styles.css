@@ -1,5 +1,5 @@
 .entete{
-   -fx-background-image: url("../images/chantier4.jpg");
+  /* -fx-background-image: url("../images/chantier.jpg");*/
 
 }
 .buttonEntete
@@ -10,9 +10,9 @@
    -fx-text-fill:rgb(255, 255, 255);  
 }
 .blocks {
-   -fx-background-color : rgb(255, 255, 255);
-   -fx-border-radius: 20px;
-   -fx-background-radius:20px;
+   -fx-background-color : rgb(248, 245, 245);
+   -fx-border-radius: 10px;
+   -fx-background-radius:10px;
     
 }
 .principale 
@@ -30,10 +30,10 @@
    
 }
 .titre {
-   -fx-text-fill :#f3691f;
+   -fx-text-fill :rgb(41, 41, 41);
    -fx-font-size : 32;
    -fx-font-style : Bold italic; 
-   -fx-effect:dropshadow(gaussian,black,5,0.2,1.0,1.0);
+   /*-fx-effect:dropshadow(gaussian,black,5,0.1,1.0,1.0);*/
 }
 
 .valider
@@ -77,8 +77,8 @@
 }
 .recherche
 {
-    -fx-background-radius: 30px;
-    -fx-border-radius : 30px;
+    -fx-background-radius: 15px;
+    -fx-border-radius : 15px;
 }
 
 .commander{

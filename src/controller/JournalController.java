@@ -64,6 +64,8 @@ public class JournalController implements Initializable {
     @FXML
     private Button retirer;
     private FilteredList<Journal> journalF;
+    @FXML
+    private Pagination pagination;
 
 
     @Override

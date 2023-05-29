@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
    <children>
       <BorderPane prefHeight="651.0" prefWidth="1201.0">
          <top>
@@ -23,42 +23,48 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="53.0" fitWidth="70.0" layoutX="1127.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="1148.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/rechercher.png" />
                      </image>
                   </ImageView>
-                  <DatePicker fx:id="dateOperations" layoutX="767.0" layoutY="19.0" prefHeight="30.0" prefWidth="235.0" promptText="date Operation rechercher" />
-                  <Button fx:id="rechercher" onAction="#filterByDisponibilite" layoutX="1019.0" layoutY="20.0" mnemonicParsing="false" styleClass="recherche" text="rechercher" />
+                  <DatePicker fx:id="dateOperations" layoutX="757.0" layoutY="19.0" prefHeight="30.0" prefWidth="256.0" promptText="date Operation rechercher" />
+                  <Button fx:id="rechercher" layoutX="1019.0" layoutY="20.0" mnemonicParsing="false" onAction="#filterByDisponibilite" prefHeight="26.0" prefWidth="121.0" styleClass="recherche" text="rechercher" />
                </children>
             </AnchorPane>
          </top>
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pagination layoutX="-1.0" prefHeight="651.0" prefWidth="1201.0" stylesheets="@../resources/style/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0" />
-                  <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="437.0" prefWidth="944.0">
+                  <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="438.0" prefWidth="934.0">
                      <columns>
-                        <TableColumn fx:id="nom" prefWidth="139.99996948242188" text="nom" />
-                        <TableColumn fx:id="categorie" editable="false" prefWidth="115.0" text="Categorie" />
-                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="127.0" text="unite" />
-                        <TableColumn fx:id="prix" editable="false" prefWidth="110.0" text="prix " />
-                        <TableColumn fx:id="quantite" editable="false" prefWidth="117.0" text="Quantite" />
-                        <TableColumn fx:id="operation" editable="false" prefWidth="73.5999755859375" text="operation" />
-                        <TableColumn fx:id="fournisseur" editable="false" prefWidth="111.199951171875" text="Fournisseur" />
-                        <TableColumn fx:id="dateOperation" editable="false" prefWidth="143.99993896484375" text="Date Operation" />
+                        <TableColumn fx:id="nom" prefWidth="139.99996948242188" text="Nom" />
+                        <TableColumn fx:id="categorie" editable="false" prefWidth="84.79998779296875" text="Catégorie" />
+                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="110.39996337890625" text="Unité" />
+                        <TableColumn fx:id="prix" editable="false" prefWidth="127.99993896484375" text="Prix " />
+                        <TableColumn fx:id="quantite" editable="false" prefWidth="91.19992065429688" text="Quantité" />
+                        <TableColumn fx:id="operation" editable="false" prefWidth="84.800048828125" text="Opération" />
+                        <TableColumn fx:id="fournisseur" editable="false" prefWidth="139.20001220703125" text="Fournisseur" />
+                        <TableColumn fx:id="dateOperation" editable="false" prefWidth="164.0" text="Date Opération" />
                      </columns>
                   </TableView>
-                  <AnchorPane layoutX="999.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" styleClass="blocks">
+                  <AnchorPane layoutX="975.0" layoutY="14.0" prefHeight="158.0" prefWidth="213.0" styleClass="blocks">
                      <children>
-                        <Label layoutX="29.0" layoutY="43.0" text="Cout du Chantier">
+                        <Label layoutX="29.0" layoutY="32.0" text="Coût du Chantier">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Cambria" size="19.0" />
                            </font></Label>
-                        <Label fx:id="montant" layoutX="37.0" layoutY="110.0" text="Montant " />
-                        <Label layoutX="133.0" layoutY="110.0" text="FCFA" />
+                        <Label fx:id="montant" layoutX="14.0" layoutY="77.0" text="Montant ">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="136.0" layoutY="77.0" text="FCFA">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font></Label>
                      </children>
                   </AnchorPane>
+                  <Pagination id="pagination" layoutX="452.0" layoutY="514.0" pageCount="10" prefHeight="71.0" prefWidth="267.0" />
                </children>
             </AnchorPane>
          </center>
