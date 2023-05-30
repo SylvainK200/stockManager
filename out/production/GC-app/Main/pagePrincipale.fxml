@@ -82,12 +82,12 @@
                               <Image url="@../resources/images/journal.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="programme" alignment="CENTER" layoutX="3.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="43.0" prefWidth="174.0" styleClass="buttonEntete" text="Programme" />
+                        <Button fx:id="programme" alignment="CENTER" layoutX="3.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToProgramme" prefHeight="43.0" prefWidth="174.0" styleClass="buttonEntete" text="Programme" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="118.0" prefWidth="160.0">
                      <children>
-                        <Button fx:id="personnel" alignment="CENTER" layoutX="11.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="43.0" prefWidth="177.0" styleClass="buttonEntete" text="Personnel" />
+                        <Button fx:id="personnel" alignment="CENTER" layoutX="11.0" layoutY="75.0" mnemonicParsing="false" onAction="#goToPersonnel" prefHeight="43.0" prefWidth="177.0" styleClass="buttonEntete" text="Personnel" />
                         <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="63.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../resources/images/journal.png" />
