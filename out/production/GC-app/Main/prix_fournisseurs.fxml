@@ -13,51 +13,51 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PreCommandeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PreCommandeController">
    <children>
       <BorderPane prefHeight="587.0" prefWidth="1201.0">
          <top>
             <AnchorPane prefHeight="64.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="rechercher" layoutX="670.0" layoutY="10.0" prefHeight="41.0" prefWidth="187.0" promptText="rechercher par le nom" styleClass="recherche" />
+                  <TextField fx:id="rechercher" layoutX="620.0" layoutY="33.0" prefHeight="24.0" prefWidth="187.0" promptText="rechercher par le nom" styleClass="recherche" />
                   <ImageView fitHeight="42.0" fitWidth="68.0" layoutX="1119.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <DatePicker fx:id="dateMaximale" layoutX="910.0" layoutY="12.0" prefHeight="40.0" prefWidth="218.0" promptText=" date maximale" />
-                  <ImageView fitHeight="46.0" fitWidth="73.0" layoutX="1141.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <DatePicker fx:id="dateMaximale" layoutX="819.0" layoutY="33.0" prefHeight="26.0" prefWidth="186.0" promptText=" date maximale" />
+                  <ImageView fitHeight="28.0" fitWidth="26.0" layoutX="1020.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/rechercher.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="33.0" layoutY="23.0" styleClass="titre" stylesheets="@../resources/style/styles.css" text="Disponibilite des materiels et materiaux" />
+                  <Label layoutX="33.0" layoutY="23.0" styleClass="titre" stylesheets="@../resources/style/styles.css" text="Disponibilité des matériels et matériaux" />
                </children>
             </AnchorPane>
          </top>
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pagination layoutY="-1.0" prefHeight="594.0" prefWidth="1201.0" AnchorPane.bottomAnchor="-70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+                  <Pagination layoutX="94.0" layoutY="534.0" pageCount="10" prefHeight="45.0" prefWidth="1009.0" AnchorPane.bottomAnchor="-61.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="534.0" />
                   <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="497.0" prefWidth="991.0" tableMenuButtonVisible="true">
                      <columns>
-                        <TableColumn fx:id="nom" prefWidth="133.0" text="nom" />
-                        <TableColumn fx:id="category" editable="false" prefWidth="144.0" text="Categorie" />
-                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="118.4000244140625" text="unite" />
-                        <TableColumn fx:id="nature" editable="false" minWidth="0.0" prefWidth="111.99996948242188" text="nature" />
+                        <TableColumn fx:id="nom" prefWidth="133.0" text="Nom" />
+                        <TableColumn fx:id="category" editable="false" prefWidth="144.0" text="Catégorie" />
+                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="118.4000244140625" text="Unité" />
+                        <TableColumn fx:id="nature" editable="false" minWidth="0.0" prefWidth="111.99996948242188" text="Nature" />
                         <TableColumn fx:id="prixUnitaire" editable="false" prefWidth="175.20001220703125" text="Prix unitaire" />
-                        <TableColumn fx:id="disponibilite" editable="false" prefWidth="141.5999755859375" text="Disponibilite" />
+                        <TableColumn fx:id="disponibilite" editable="false" prefWidth="141.5999755859375" text="Disponibilité" />
                         <TableColumn fx:id="fournisseur" editable="false" prefWidth="141.5999755859375" text="Fournisseur" />
                      </columns>
                   </TableView>
-                  <AnchorPane layoutX="1031.0" layoutY="17.0" prefHeight="174.0" prefWidth="154.0" styleClass="blocks">
+                  <AnchorPane layoutX="1031.0" layoutY="13.0" prefHeight="234.0" prefWidth="154.0" styleClass="blocks">
                      <children>
                         <Label layoutX="7.0" layoutY="12.0" prefHeight="31.0" prefWidth="147.0" styleClass="sousTitre" text="Classer suivant" />
-                        <Button fx:id="finddisponibilite" layoutX="12.0" layoutY="75.0" mnemonicParsing="false" onAction="#filterByDisponibilite" prefHeight="37.0" prefWidth="124.0" styleClass="classer" text="disponibilite" />
+                        <Button fx:id="finddisponibilite" layoutX="12.0" layoutY="75.0" mnemonicParsing="false" onAction="#filterByDisponibilite" prefHeight="37.0" prefWidth="124.0" styleClass="classer" text="disponibilité" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="1032.0" layoutY="250.0" prefHeight="253.0" prefWidth="157.0" styleClass="blocks">
+                  <AnchorPane layoutX="1032.0" layoutY="242.0" prefHeight="270.0" prefWidth="158.0" styleClass="blocks">
                      <children>
-                        <Button fx:id="supprimer" layoutX="19.0" layoutY="199.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="122.0" styleClass="annuler" text="supprimer" />
-                        <Button fx:id="commander" layoutX="15.0" layoutY="95.0" mnemonicParsing="false" onAction="#commander" prefHeight="37.0" prefWidth="124.0" styleClass="commander" text="Ajouter" />
-                        <Spinner fx:id="quantite" layoutX="36.0" layoutY="43.0" prefHeight="31.0" prefWidth="75.0" />
-                        <Label layoutX="38.0" styleClass="sousTitre" text="Quantite" />
+                        <Button fx:id="supprimer" layoutX="19.0" layoutY="163.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="122.0" styleClass="annuler" text="supprimer" />
+                        <Button fx:id="commander" layoutX="17.0" layoutY="111.0" mnemonicParsing="false" onAction="#commander" prefHeight="27.0" prefWidth="124.0" styleClass="commander" text="Ajouter" />
+                        <Spinner fx:id="quantite" layoutX="22.0" layoutY="43.0" prefHeight="31.0" prefWidth="115.0" />
+                        <Label layoutX="38.0" styleClass="sousTitre" text="Quantité" />
                      </children>
                   </AnchorPane>
                </children>

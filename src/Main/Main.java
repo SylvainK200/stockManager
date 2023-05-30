@@ -46,8 +46,6 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("pagePrincipale.fxml"));
             rootLayout = (BorderPane) loader.load();
-
-
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -56,6 +54,33 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
+    public static void showPersonnel() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("personnel.fxml"));
+            AnchorPane personnel = (AnchorPane) loader.load();
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(personnel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void showProgramme() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("programme.fxml"));
+            AnchorPane programme = (AnchorPane) loader.load();
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(programme);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void showPersonOverview() {
         try {
             // Load person overview.

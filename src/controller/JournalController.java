@@ -171,7 +171,6 @@ public class JournalController implements Initializable {
     void supprimer(ActionEvent event){
         tableau.getSelectionModel().getSelectedItems().forEach(r ->{
             tableau.getItems().remove(r);
-
         });
     }
 

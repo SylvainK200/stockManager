@@ -12,6 +12,8 @@
         <class>model.Operation</class>
         <class>model.Precommande</class>
         <class>model.Stock</class>
+        <class>model.Person</class>
+        <class>model.Task</class>
         <class>model.User</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
