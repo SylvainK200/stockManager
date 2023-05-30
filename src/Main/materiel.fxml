@@ -13,48 +13,48 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MaterielController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MaterielController">
    <children>
       <BorderPane prefHeight="651.0" prefWidth="1201.0">
          <top>
             <AnchorPane prefHeight="52.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="rechercher" layoutX="887.0" layoutY="12.0" prefHeight="44.0" prefWidth="221.0" promptText="rechercher par le nom" styleClass="recherche" />
+                  <TextField fx:id="rechercher" layoutX="564.0" layoutY="27.0" prefHeight="29.0" prefWidth="222.0" promptText="rechercher par le nom" styleClass="recherche" />
                   <Label layoutX="38.0" layoutY="15.0" styleClass="titre" text="Materiels et materiaux utilisables ">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="53.0" fitWidth="70.0" layoutX="1119.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="797.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/rechercher.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="ajouter" layoutX="839.0" layoutY="22.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="37.0" prefWidth="132.0" styleClass="commander" text="Ajouter" />
+                  <Button fx:id="Supprimer" layoutX="997.0" layoutY="24.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="37.0" prefWidth="132.0" styleClass="annuler" text="Supprimer" />
                </children>
             </AnchorPane>
          </top>
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pagination fx:id="pagination" layoutX="14.0" prefHeight="651.0" prefWidth="1201.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0" />
+                  <Pagination fx:id="pagination" layoutY="525.0" prefHeight="64.0" prefWidth="1187.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="525.0" />
                   <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="437.0" prefWidth="944.0">
                      <columns>
                         <TableColumn fx:id="nom" prefWidth="216.99996948242188" text="Nom" />
-                        <TableColumn fx:id="categorie" editable="false" prefWidth="282.0" text="Categorie" />
-                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="257.0" text="unite" />
-                        <TableColumn fx:id="nature" editable="false" prefWidth="186.0" text="nature" />
+                        <TableColumn fx:id="categorie" editable="false" prefWidth="282.0" text="Catégorie" />
+                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="257.0" text="Unité" />
+                        <TableColumn fx:id="nature" editable="false" prefWidth="186.0" text="Nature" />
                      </columns>
                   </TableView>
-                  <AnchorPane layoutX="1001.0" layoutY="40.0" prefHeight="370.0" prefWidth="200.0" styleClass="blocks">
+                  <AnchorPane layoutX="985.0" layoutY="16.0" prefHeight="435.0" prefWidth="210.0" styleClass="blocks">
                      <children>
-                        <Button fx:id="ajouter" layoutX="32.0" layoutY="264.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="37.0" prefWidth="132.0" styleClass="commander" text="Ajouter" />
-                        <Button fx:id="Supprimer" layoutX="32.0" layoutY="326.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="37.0" prefWidth="132.0" styleClass="annuler" text="Supprimer" />
+                        <Button fx:id="creerPreCommande" layoutX="37.0" layoutY="233.0" mnemonicParsing="false" onAction="#createPrecommande" prefHeight="31.0" prefWidth="123.0" styleClass="valider" text="valider prix" />
+                        <TextField fx:id="prix" layoutX="12.0" layoutY="84.0" prefHeight="29.0" prefWidth="186.0" promptText="entrer le prix" styleClass="recherche" />
+                        <TextField fx:id="nomFournisseur" layoutX="11.0" layoutY="28.0" prefHeight="28.0" prefWidth="187.0" promptText="entrer nom fournisseur" styleClass="recherche" />
+                        <DatePicker fx:id="disponibilite" layoutX="14.0" layoutY="152.0" prefHeight="31.0" prefWidth="181.0" promptText="disponibilite" />
                      </children>
                   </AnchorPane>
-                  <Button fx:id="creerPreCommande" layoutX="1037.0" layoutY="206.0" mnemonicParsing="false" onAction="#createPrecommande" prefHeight="37.0" prefWidth="123.0" styleClass="valider" text="valider prix" />
-                  <TextField fx:id="prix" layoutX="1006.0" layoutY="102.0" prefHeight="41.0" prefWidth="186.0" promptText="entrer le prix" styleClass="recherche" />
-                  <TextField fx:id="nomFournisseur" layoutX="1006.0" layoutY="54.0" prefHeight="40.0" prefWidth="187.0" promptText="entrer nom fournisseur" styleClass="recherche" />
-                  <DatePicker fx:id="disponibilite" layoutX="1010.0" layoutY="163.0" prefHeight="31.0" prefWidth="181.0" promptText="disponibilite" />
                </children>
             </AnchorPane>
          </center>

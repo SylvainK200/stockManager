@@ -13,14 +13,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StockController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1190.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StockController">
    <children>
-      <BorderPane layoutX="6.0" layoutY="8.0" prefHeight="580.0" prefWidth="1201.0">
+      <BorderPane layoutX="6.0" layoutY="8.0" prefHeight="580.0" prefWidth="1190.0">
          <top>
-            <AnchorPane prefHeight="70.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="70.0" prefWidth="1190.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="rechercher" layoutX="879.0" layoutY="14.0" prefHeight="43.0" prefWidth="243.0" promptText="rechercher par le nom ou nature " styleClass="recherche" />
-                  <ImageView fitHeight="49.0" fitWidth="82.0" layoutX="1135.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField fx:id="rechercher" layoutX="546.0" layoutY="24.0" prefHeight="31.0" prefWidth="243.0" promptText="rechercher par le nom ou nature " styleClass="recherche" />
+                  <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="796.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/rechercher.png" />
                      </image>
@@ -30,33 +30,33 @@
                         <Font size="26.0" />
                      </font>
                   </Label>
+                  <Button fx:id="commander" layoutX="873.0" layoutY="20.0" mnemonicParsing="false" onAction="#commander" prefHeight="39.0" prefWidth="116.0" styleClass="commander" text="Commander" />
                </children>
             </AnchorPane>
          </top>
-         <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <AnchorPane prefHeight="509.0" prefWidth="1120.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pagination fx:id="pagination" layoutX="-7.0" layoutY="4.0" prefHeight="567.0" prefWidth="1201.0" AnchorPane.bottomAnchor="-61.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="4.0" />
+                  <Pagination fx:id="pagination" layoutX="-7.0" layoutY="525.0" prefHeight="46.0" prefWidth="1202.0" AnchorPane.bottomAnchor="-61.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="525.0" />
                   <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="437.0" prefWidth="991.0">
                      <columns>
                         <TableColumn fx:id="nom" prefWidth="249.0" text="Nom" />
-                        <TableColumn fx:id="categorie" editable="false" prefWidth="157.0" text="Categorie" />
-                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="183.0" text="unite" />
+                        <TableColumn fx:id="categorie" editable="false" prefWidth="157.0" text="Catégorie" />
+                        <TableColumn fx:id="type" editable="false" minWidth="0.0" prefWidth="183.0" text="Unité" />
                         <TableColumn fx:id="nature" editable="false" prefWidth="196.0" text="Nature" />
-                        <TableColumn fx:id="Quantite" editable="false" prefWidth="205.0" text="Quantite" />
+                        <TableColumn fx:id="Quantite" editable="false" prefWidth="205.0" text="Quantité" />
                      </columns>
                   </TableView>
-                  <AnchorPane layoutX="1046.0" layoutY="94.0" prefHeight="286.0" prefWidth="141.0" styleClass="blocks">
+                  <AnchorPane layoutX="1031.0" layoutY="14.0" prefHeight="143.0" prefWidth="150.0" styleClass="blocks">
                      <children>
-                        <Spinner fx:id="retirerQuantite" layoutX="33.0" layoutY="43.0" prefHeight="31.0" prefWidth="71.0" />
+                        <Spinner fx:id="retirerQuantite" layoutX="13.0" layoutY="44.0" prefHeight="31.0" prefWidth="113.0" />
                         <Button fx:id="retirer" layoutX="13.0" layoutY="89.0" mnemonicParsing="false" onAction="#retirerQuantite" prefHeight="37.0" prefWidth="113.0" styleClass="annuler" text="retirer" />
-                        <Label layoutX="30.0" layoutY="4.0" styleClass="sousTitre" text="Quantite" />
-                        <Button fx:id="commander" layoutX="12.0" layoutY="221.0" mnemonicParsing="false" onAction="#commander" prefHeight="39.0" prefWidth="116.0" styleClass="commander" text="Commander" />
+                        <Label layoutX="30.0" layoutY="4.0" styleClass="sousTitre" text="Quantité" />
                      </children>
                   </AnchorPane>
                </children>
             </AnchorPane>
-         </center>
+         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>

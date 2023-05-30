@@ -18,12 +18,7 @@
          <top>
             <AnchorPane prefHeight="52.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="42.0" layoutY="12.0" prefHeight="40.0" prefWidth="369.0" styleClass="titre" text="Journal des operations ">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="1148.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="1149.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/rechercher.png" />
                      </image>
@@ -36,7 +31,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="438.0" prefWidth="934.0">
+                  <TableView fx:id="tableau" layoutX="40.0" layoutY="68.0" prefHeight="438.0" prefWidth="934.0">
                      <columns>
                         <TableColumn fx:id="nom" prefWidth="139.99996948242188" text="Nom" />
                         <TableColumn fx:id="categorie" editable="false" prefWidth="84.79998779296875" text="Catégorie" />
@@ -48,7 +43,7 @@
                         <TableColumn fx:id="dateOperation" editable="false" prefWidth="164.0" text="Date Opération" />
                      </columns>
                   </TableView>
-                  <AnchorPane layoutX="975.0" layoutY="14.0" prefHeight="158.0" prefWidth="213.0" styleClass="blocks">
+                  <AnchorPane layoutX="979.0" layoutY="68.0" prefHeight="158.0" prefWidth="213.0" styleClass="blocks">
                      <children>
                         <Label layoutX="29.0" layoutY="32.0" text="Coût du Chantier">
                            <font>
@@ -65,6 +60,11 @@
                      </children>
                   </AnchorPane>
                   <Pagination id="pagination" layoutX="452.0" layoutY="514.0" pageCount="10" prefHeight="71.0" prefWidth="267.0" />
+                  <Label layoutX="322.0" layoutY="2.0" prefHeight="47.0" prefWidth="409.0" styleClass="titre" text="Historique des opérations ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </center>

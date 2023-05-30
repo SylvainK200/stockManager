@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="background" stylesheets="@../resources/style/enregistrement.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutFournisseurController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="background" stylesheets="@../resources/style/enregistrement.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutFournisseurController">
    <children>
       <Button fx:id="valider" layoutX="497.0" layoutY="484.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="111.0" styleClass="valider" text="Valider" />
       <Button fx:id="annuler" layoutX="668.0" layoutY="490.0" mnemonicParsing="false" onAction="#annuler" prefHeight="31.0" prefWidth="105.0" styleClass="annuler" text="Annuler" />
@@ -32,8 +32,8 @@
             <TextField fx:id="localisation" prefHeight="38.0" prefWidth="269.0" styleClass="formulaire" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="addresseEmail" prefHeight="41.0" prefWidth="269.0" styleClass="formulaire" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="numeroTelephone" prefHeight="41.0" prefWidth="269.0" styleClass="formulaire" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Numero Telephone" GridPane.rowIndex="1" />
-            <Label text="Addresse electronique" GridPane.rowIndex="2" />
+            <Label text="Téléphone" GridPane.rowIndex="1" />
+            <Label text="Addresse électronique" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <AnchorPane layoutX="-11.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" />

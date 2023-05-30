@@ -12,43 +12,44 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FournisseurController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1201.0" styleClass="principale" stylesheets="@../resources/style/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FournisseurController">
    <children>
-      <BorderPane layoutX="7.0" prefHeight="580.0" prefWidth="1201.0">
+      <BorderPane layoutX="7.0" prefHeight="580.0" prefWidth="1174.0">
          <top>
             <AnchorPane prefHeight="60.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="rechercher" layoutX="895.0" layoutY="12.0" prefHeight="43.0" prefWidth="212.0" promptText="rechercher" styleClass="recherche" />
-                  <Label layoutX="36.0" layoutY="15.0" prefHeight="40.0" prefWidth="331.0" styleClass="titre" text="Fournisseur du chantier">
+                  <TextField fx:id="rechercher" layoutX="601.0" layoutY="23.0" prefHeight="30.0" prefWidth="212.0" promptText="rechercher" styleClass="recherche" />
+                  <Label layoutX="36.0" layoutY="12.0" prefHeight="40.0" prefWidth="331.0" styleClass="titre" text="Fournisseur du chantier">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="819.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/rechercher.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="ajouter" layoutX="858.0" layoutY="17.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="107.0" styleClass="valider" text="Ajouter" />
+                  <Button fx:id="supprimer" layoutX="979.0" layoutY="18.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="107.0" styleClass="annuler" text="Supprimer" />
                </children>
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="520.0" prefWidth="1130.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pagination fx:id="pagination" layoutX="-7.0" prefHeight="580.0" prefWidth="1201.0" AnchorPane.bottomAnchor="-60.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0" />
-                  <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="499.0" prefWidth="944.0">
+                  <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="499.0" prefWidth="1054.0">
                      <columns>
-                        <TableColumn fx:id="nom" prefWidth="265.0" text="nom" />
-                        <TableColumn fx:id="addresse" editable="false" prefWidth="234.0" text="Addresse" />
-                        <TableColumn fx:id="localisation" editable="false" minWidth="0.0" prefWidth="257.0" text="localisation" />
-                        <TableColumn fx:id="addresseEmail" editable="false" prefWidth="186.0" text="Addresse Email" />
+                        <TableColumn fx:id="nom" prefWidth="223.1999397277832" text="Nom" />
+                        <TableColumn fx:id="addresse" editable="false" prefWidth="204.800048828125" text="Addresse" />
+                        <TableColumn fx:id="localisation" editable="false" minWidth="0.0" prefWidth="244.79998779296875" text="Localisation" />
+                        <TableColumn fx:id="addresseEmail" editable="false" prefWidth="158.4000244140625" text="Addresse Email" />
+                        <TableColumn fx:id="addresseEmail1" editable="false" prefWidth="219.199951171875" text="Description" />
                      </columns>
                   </TableView>
-                  <Button fx:id="supprimer" layoutX="1036.0" layoutY="73.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="107.0" styleClass="annuler" text="Supprimer" />
-                  <Button fx:id="ajouter" layoutX="1036.0" layoutY="14.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="107.0" styleClass="valider" text="Ajouter" />
                </children>
             </AnchorPane>
          </center>
       </BorderPane>
-      <ImageView fitHeight="43.0" fitWidth="58.0" layoutX="1125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/images/rechercher.png" />
-         </image>
-      </ImageView>
+      <Pagination fx:id="pagination" layoutX="27.0" layoutY="583.0" pageCount="10" prefHeight="53.0" prefWidth="1160.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="583.0" />
    </children>
 </AnchorPane>
