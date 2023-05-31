@@ -41,7 +41,7 @@ public class ProgrammeController implements Initializable {
     private TableColumn<ProgrammeDto, String> phoneNumber;
 
     @FXML
-    private TableColumn<ProgrammeDto, Date> realisationDate;
+    private TableColumn<ProgrammeDto, String> realisationDate;
     @FXML
     private TableColumn<ProgrammeDto,Double> numberOfHours;
 
@@ -64,9 +64,9 @@ public class ProgrammeController implements Initializable {
     public void initTable(){
         personName.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("personName"));
         taskDescription.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("taskDescription"));
-        phoneNumber.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("phoneNumber"));
+        phoneNumber.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("personPhoneNumber"));
         numberOfHours.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, Double>("numberOfHours"));
-        realisationDate.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, Date>("realisationDate"));
+        realisationDate.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("realisationDate"));
 
         TableView.TableViewSelectionModel<ProgrammeDto> model = tableau.getSelectionModel();
         model.setSelectionMode(SelectionMode.MULTIPLE);
@@ -119,6 +119,6 @@ public class ProgrammeController implements Initializable {
     }
 
     public void ajouter() {
-        Main.showPages("pageAjoutProgramme.fxml");
+        Main.showPages("ajoutProgramme.fxml");
     }
 }

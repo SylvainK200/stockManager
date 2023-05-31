@@ -2,13 +2,14 @@ package dto;
 
 import model.Task;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProgrammeDto {
     private Integer id;
     private String name;
     private String taskDescription;
-    private Date realisationDate;
+    private String realisationDate;
     private Double numberOfHours;
     private String personName;
     private Integer personId;
@@ -46,11 +47,11 @@ public class ProgrammeDto {
         this.taskDescription = taskDescription;
     }
 
-    public Date getRealisationDate() {
+    public String getRealisationDate() {
         return realisationDate;
     }
 
-    public void setRealisationDate(Date realisationDate) {
+    public void setRealisationDate(String realisationDate) {
         this.realisationDate = realisationDate;
     }
 
@@ -79,14 +80,16 @@ public class ProgrammeDto {
     }
 
     public static ProgrammeDto map(Task task){
-        ProgrammeDto programmeDto = new ProgrammeDto();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yy");
+        String date = dateFormat.format(task.getRealisationDate());
+         ProgrammeDto programmeDto = new ProgrammeDto();
         programmeDto.setId(task.getId());
         programmeDto.setName(task.getName());
         programmeDto.setPersonId(task.getPerson().getId());
         programmeDto.setPersonName(task.getPerson().getName());
         programmeDto.setTaskDescription(task.getTaskDescription());
         programmeDto.setNumberOfHours(task.getNumberOfHours());
-        programmeDto.setRealisationDate(task.getRealisationDate());
+        programmeDto.setRealisationDate(date);
         programmeDto.setPersonPhoneNumber(task.getPerson().getPhoneNumber());
         return programmeDto;
     }

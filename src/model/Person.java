@@ -10,13 +10,22 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String name;
+    private String nom;
     private String post;
     private String phoneNumber;
     private Double remuneration;
     @Temporal(TemporalType.DATE)
     private Date birthDay;
 
+    public Person(Integer id, String nom, String post, String phoneNumber, Double remuneration, Date birthDay) {
+        this.id = id;
+        this.nom = nom;
+        this.post = post;
+        this.phoneNumber = phoneNumber;
+        this.remuneration = remuneration;
+        this.birthDay = birthDay;
+    }
+    public Person(){}
     public Integer getId() {
         return id;
     }
@@ -26,11 +35,11 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return nom;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String nom) {
+        this.nom = nom;
     }
 
     public String getPost() {

@@ -118,6 +118,6 @@ public class PersonnelController implements Initializable {
     }
 
     public void ajouter() {
-        Main.showPages("pageAjoutPersonnel.fxml");
+        Main.showPages("ajoutPersonnel.fxml");
     }
 }

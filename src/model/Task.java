@@ -21,6 +21,16 @@ public class Task {
     @JoinColumn(name = "person_id")
     private Person person;
 
+    public Task(Integer id, String name, String taskDescription, Date realisationDate, Double numberOfHours, Person person) {
+        this.id = id;
+        this.name = name;
+        this.taskDescription = taskDescription;
+        this.realisationDate = realisationDate;
+        this.numberOfHours = numberOfHours;
+        this.person = person;
+    }
+    public Task(){}
+
     public Integer getId() {
         return id;
     }
