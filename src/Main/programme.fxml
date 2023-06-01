@@ -35,21 +35,33 @@
                 </AnchorPane>
             </top>
             <center>
-                <AnchorPane prefHeight="520.0" prefWidth="1130.0" BorderPane.alignment="CENTER">
+                <AnchorPane prefHeight="526.0" prefWidth="1198.0" BorderPane.alignment="CENTER">
                     <children>
-                        <TableView fx:id="tableau" layoutX="36.0" layoutY="14.0" prefHeight="499.0" prefWidth="1054.0">
+                        <TableView fx:id="tableau" layoutY="27.0" prefHeight="499.0" prefWidth="1030.0">
                             <columns>
-                                <TableColumn fx:id="personName" prefWidth="223.1999397277832" text="Responsable" />
-                                <TableColumn fx:id="taskDescription" editable="false" prefWidth="204.800048828125" text="Description" />
-                                <TableColumn fx:id="realisationDate" editable="false" minWidth="0.0" prefWidth="244.79998779296875" text="Date réalisation" />
-                                <TableColumn fx:id="numberOfHours" editable="false" prefWidth="158.4000244140625" text="nombre d'heures" />
-                                <TableColumn fx:id="phoneNumber" editable="false" prefWidth="219.199951171875" text="Numéro téléphone" />
+                                <TableColumn fx:id="personName" prefWidth="152.79998397827148" text="Responsable" />
+                                <TableColumn fx:id="taskDescription" editable="false" prefWidth="220.0000457763672" text="Description" />
+                                <TableColumn fx:id="realisationDate" editable="false" minWidth="0.0" prefWidth="130.4000244140625" text="Date réalisation" />
+                                <TableColumn fx:id="numberOfHours" editable="false" prefWidth="106.4000244140625" text="Durée (h)" />
+                                <TableColumn fx:id="phoneNumber" editable="false" prefWidth="108.79998779296875" text="Téléphone" />
+                        <TableColumn fx:id="beginingDate" editable="false" prefWidth="124.0" text="Date début" />
+                        <TableColumn fx:id="endingDate" editable="false" prefWidth="120.79998779296875" text="Date fin" />
+                        <TableColumn fx:id="executionPercentage" editable="false" prefWidth="64.800048828125" text="Taux" />
                             </columns>
                         </TableView>
+                  <TextField fx:id="percentage" layoutX="1035.0" layoutY="199.0" prefHeight="26.0" prefWidth="146.0" promptText="taux d'exécution" styleClass="recherche" />
+                  <Button fx:id="registerButtonRealisation" layoutX="1058.0" layoutY="255.0" mnemonicParsing="false" onAction="#ajouterRealisation" prefHeight="19.0" prefWidth="107.0" styleClass="valider" text="Enregistrer" />
+                  <Label layoutX="1044.0" layoutY="27.0" text="Réalisation">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="effectiveEndingHour" layoutX="1035.0" layoutY="159.0" prefHeight="26.0" prefWidth="146.0" promptText="Heure de départ" styleClass="recherche" />
+                  <TextField fx:id="effectiveBeginingHour" layoutX="1037.0" layoutY="114.0" prefHeight="26.0" prefWidth="146.0" promptText="Heure d'arrivée" styleClass="recherche" />
                     </children>
                 </AnchorPane>
             </center>
         </BorderPane>
-        <Pagination fx:id="pagination" layoutX="27.0" layoutY="583.0" pageCount="10" prefHeight="53.0" prefWidth="1160.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="583.0" />
+        <Pagination fx:id="pagination" layoutX="27.0" layoutY="595.0" pageCount="10" prefHeight="53.0" prefWidth="1160.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="595.0" />
     </children>
 </AnchorPane>

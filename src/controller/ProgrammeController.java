@@ -1,7 +1,9 @@
 package controller;
 
 import Main.Main;
+import dao.dao.PersonDAO;
 import dao.dao.TaskDAO;
+import dao.daoImpl.PersonDaoImpl;
 import dao.daoImpl.TaskDaoImpl;
 import dto.ProgrammeDto;
 import javafx.beans.value.ObservableValue;
@@ -12,15 +14,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.Task;
 
 import java.net.URL;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class ProgrammeController implements Initializable {
     public final TaskDAO taskDAO = new TaskDaoImpl();
+    public final PersonDAO personDAO = new PersonDaoImpl();
 
     @FXML
     private TextField rechercher;
@@ -45,6 +50,26 @@ public class ProgrammeController implements Initializable {
     @FXML
     private TableColumn<ProgrammeDto,Double> numberOfHours;
 
+    @FXML
+    private TableColumn<ProgrammeDto, String> beginingDate;
+
+    @FXML
+    private TableColumn<ProgrammeDto, String> endingDate;
+
+    @FXML
+    private TableColumn<ProgrammeDto, String> executionPercentage;
+
+    @FXML
+    private TextField effectiveBeginingHour;
+
+    @FXML
+    private TextField effectiveEndingHour;
+
+    @FXML
+    private TextField percentage;
+
+    @FXML
+    private Button registerButtonRealisation;
 
 
 
@@ -56,8 +81,10 @@ public class ProgrammeController implements Initializable {
     private FilteredList<ProgrammeDto> programF;
 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         initTable();
     }
 
@@ -67,6 +94,9 @@ public class ProgrammeController implements Initializable {
         phoneNumber.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("personPhoneNumber"));
         numberOfHours.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, Double>("numberOfHours"));
         realisationDate.setCellValueFactory(new PropertyValueFactory<ProgrammeDto, String>("realisationDate"));
+        endingDate.setCellValueFactory(new PropertyValueFactory<ProgrammeDto,String>("endingDate"));
+        beginingDate.setCellValueFactory(new PropertyValueFactory<ProgrammeDto,String>("beginingDate"));
+        executionPercentage.setCellValueFactory(new PropertyValueFactory<ProgrammeDto,String>("executionPercentage"));
 
         TableView.TableViewSelectionModel<ProgrammeDto> model = tableau.getSelectionModel();
         model.setSelectionMode(SelectionMode.MULTIPLE);
@@ -120,5 +150,24 @@ public class ProgrammeController implements Initializable {
 
     public void ajouter() {
         Main.showPages("ajoutProgramme.fxml");
+    }
+    @FXML
+    void ajouterRealisation() {
+        ProgrammeDto programmeDto = tableau.getSelectionModel().getSelectedItem();
+        if(Objects.nonNull(programmeDto) && infoBon()){
+            Task task = taskDAO.find(programmeDto.getId());
+            task.setBeginingHour(effectiveBeginingHour.getText());
+            task.setEndingHour(effectiveEndingHour.getText());
+            task.setExecutionPercentage(Double.parseDouble(percentage.getText()));
+            taskDAO.save(task);
+            initTable();
+        }
+
+    }
+    boolean infoBon(){
+        return Objects.nonNull(effectiveBeginingHour.getText()) && effectiveBeginingHour.getText().length()>0
+                && Objects.nonNull(effectiveEndingHour.getText()) && effectiveEndingHour.getText().length()>0
+                && Objects.nonNull(percentage.getText())
+                && percentage.getText().length()>0;
     }
 }

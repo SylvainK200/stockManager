@@ -17,6 +17,28 @@ public class Task {
 
     private Double numberOfHours;
 
+    private String beginingHour;
+
+    private String endingHour;
+
+    private Double executionPercentage;
+
+    public String getBeginingHour() {
+        return beginingHour;
+    }
+
+    public void setBeginingHour(String beginingHour) {
+        this.beginingHour = beginingHour;
+    }
+
+    public String getEndingHour() {
+        return endingHour;
+    }
+
+    public void setEndingHour(String endingHour) {
+        this.endingHour = endingHour;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "person_id")
     private Person person;
@@ -27,9 +49,36 @@ public class Task {
         this.taskDescription = taskDescription;
         this.realisationDate = realisationDate;
         this.numberOfHours = numberOfHours;
+
         this.person = person;
     }
+
+    public Task(Integer id, String name, String taskDescription,
+                Date realisationDate, Double numberOfHours,
+                String beginingHour, String endingHour,
+                Double executionPercentage, Person person) {
+        this.id = id;
+        this.name = name;
+        this.taskDescription = taskDescription;
+        this.realisationDate = realisationDate;
+        this.numberOfHours = numberOfHours;
+        this.beginingHour = beginingHour;
+        this.endingHour = endingHour;
+        this.executionPercentage = executionPercentage;
+        this.person = person;
+    }
+
     public Task(){}
+
+
+
+    public Double getExecutionPercentage() {
+        return executionPercentage;
+    }
+
+    public void setExecutionPercentage(Double executionPercentage) {
+        this.executionPercentage = executionPercentage;
+    }
 
     public Integer getId() {
         return id;
